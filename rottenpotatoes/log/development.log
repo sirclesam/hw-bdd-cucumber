@@ -493,3 +493,405 @@ Started GET "/assets/application.self.css?body=1" for ::1 at 2015-07-23 13:57:16
 
 
 Started GET "/assets/application.self.js?body=1" for ::1 at 2015-07-23 13:57:16 -0700
+
+
+Started GET "/movies" for 198.8.80.201 at 2016-03-01 21:50:49 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (95.2ms)
+Completed 200 OK in 632ms (Views: 556.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:50:51 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:50:51 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:50:51 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:50:51 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=title" for 198.8.80.201 at 2016-03-01 21:55:22 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"title"}
+Redirected to https://cloudhub9-sirclesam1.c9users.io/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=title" for 198.8.80.201 at 2016-03-01 21:55:22 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 64ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:55:23 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:23 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:23 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=title" for 198.8.80.201 at 2016-03-01 21:55:24 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (22.4ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:24 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:24 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:24 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:55:24 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 21:55:35 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+Redirected to https://cloudhub9-sirclesam1.c9users.io/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 21:55:35 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (1.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (52.6ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:55:35 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:36 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:36 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:55:36 +0000
+
+
+Started GET "/movies/7" for 198.8.80.201 at 2016-03-01 21:56:30 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered movies/show.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 62ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:56:30 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:30 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:31 +0000
+
+
+Started DELETE "/movies/7" for 198.8.80.201 at 2016-03-01 21:56:33 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wj16iMh4STzw5cs1zwccEpOjZ4m8GitscbUN6gwtY5jx7nad6GpHh1p24YBfNuZSBdmum/S8A5tpLFTItTjMgw==", "id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 7]]
+  [1m[36m (28.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://cloudhub9-sirclesam1.c9users.io/movies
+Completed 302 Found in 35ms (ActiveRecord: 30.2ms)
+
+
+Started GET "/movies" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://cloudhub9-sirclesam1.c9users.io/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 21:56:34 +0000
+  [1m[36mMovie Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."title" = ?  [["title", "Aladdin"]]
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE ("movies"."id" BETWEEN 11 AND 20)[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (22.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 12]]
+  [1m[36m (18.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 13]]
+  [1m[35m (11.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 14]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 15]]
+  [1m[35m (14.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 16]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 17]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 18]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 19]]
+  [1m[35m (14.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 20]]
+  [1m[36m (22.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:01:45 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:01:45 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:01:45 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:01:45 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:01:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:01:46 +0000
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."title" = ?[0m  [["title", "Amelie"]]
+  [1m[35mMovie Exists (0.3ms)[0m  SELECT  1 AS one FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Amelie"]]
+  [1m[36mMovie Load (4.7ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ?  [["id", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ?  [["id", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies"."title" FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  [1m[35mMovie Exists (0.5ms)[0m  SELECT  1 AS one FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:20:28 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:20:29 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 124ms (Views: 122.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:00 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:22:03 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:24:57 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 22:25:31 +0000
+  [1m[36mMovie Load (4.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "movies"
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 23:02:38 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (77.4ms)
+Completed 200 OK in 419ms (Views: 371.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 23:02:39 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:02:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:02:39 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:02:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:02:40 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:02:40 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BNC-17%5D=NC-17&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort=release_date" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "NC-17"=>"NC-17", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:22:20 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 198.8.80.201 at 2016-03-01 23:22:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMovie Load (8.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m

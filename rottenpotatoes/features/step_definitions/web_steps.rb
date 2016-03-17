@@ -120,7 +120,7 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
-Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+Then /^(?:|I )should not see "([^"]*)"$/ do |text| #"
   if page.respond_to? :should
     page.should have_no_content(text)
   else
@@ -194,6 +194,7 @@ Then /^the "([^"]*)" field should have the error "([^"]*)"$/ do |field, error_me
 end
 
 Then /^the "([^"]*)" field should have no error$/ do |field|
+#"
   element = find_field(field)
   classes = element.find(:xpath, '..')[:class].split(' ')
   if classes.respond_to? :should
@@ -206,6 +207,7 @@ Then /^the "([^"]*)" field should have no error$/ do |field|
 end
 
 Then /^the "([^"]*)" checkbox(?: within (.*))? should be checked$/ do |label, parent|
+#"
   with_scope(parent) do
     field_checked = find_field(label)['checked']
     if field_checked.respond_to? :should
@@ -217,6 +219,7 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should be checked$/ do |label, pa
 end
 
 Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label, parent|
+#" commented " to make cloud9 get the syntax coloring right"
   with_scope(parent) do
     field_checked = find_field(label)['checked']
     if field_checked.respond_to? :should
@@ -226,6 +229,8 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
     end
   end
 end
+ 
+
  
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
@@ -252,3 +257,5 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+#"
